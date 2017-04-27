@@ -29,10 +29,8 @@ class ViewController: UIViewController {
     }
     
     func getWeatherData(urlString:String){
-       let url = URL(string: urlString)
-        print(txtfeild.text)
-        print(url)
-        
+       
+        let url = URL(string: urlString)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.sync(execute: {
          self.setLables(weatherData: data!)
